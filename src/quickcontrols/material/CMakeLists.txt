@@ -5,16 +5,8 @@
 ## QuickControls2Material Module:
 #####################################################################
 
-set(application_window_qml "ApplicationWindow.qml")
-if(ANDROID)
-    set(application_window_qml "android/${application_window_qml}")
-    set_source_files_properties("${application_window_qml}" PROPERTIES
-        QT_RESOURCE_ALIAS "ApplicationWindow.qml"
-    )
-endif()
-
 set(qml_files
-    "${application_window_qml}"
+    "ApplicationWindow.qml"
     "BusyIndicator.qml"
     "Button.qml"
     "CheckBox.qml"
@@ -25,6 +17,13 @@ set(qml_files
     "Dialog.qml"
     "DialogButtonBox.qml"
     "DoubleSpinBox.qml"
+    "DockArea.qml"
+    "DockLayout.qml"
+    "DockTabBar.qml"
+    "DockContainer.qml"
+    "DockPanel.qml"
+    "DockGroup.qml"
+    "DockMoveGuide.qml"
     "Drawer.qml"
     "Frame.qml"
     "GroupBox.qml"

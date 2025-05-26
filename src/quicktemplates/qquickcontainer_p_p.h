@@ -27,10 +27,7 @@ class Q_QUICKTEMPLATES2_EXPORT QQuickContainerPrivate : public QQuickControlPriv
 public:
     Q_DECLARE_PUBLIC(QQuickContainer)
 
-    static QQuickContainerPrivate *get(QQuickContainer *container)
-    {
-        return container->d_func();
-    }
+    static QQuickContainerPrivate *get(QQuickContainer *container) { return container->d_func(); }
 
     void init();
     void cleanup();

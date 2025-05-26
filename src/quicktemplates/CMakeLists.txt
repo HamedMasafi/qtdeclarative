@@ -118,6 +118,34 @@ qt_internal_add_qml_module(QuickTemplates2
         qquicktooltip_p_p.h
         qquickvelocitycalculator.cpp
         qquickvelocitycalculator_p_p.h
+
+        qquickdockgroup.cpp
+        qquickdockgroup_p.h
+        qquickdockgroup_p_p.h
+        qquickdockcontainer.cpp
+        qquickdockcontainer_p.h
+        qquickdockcontainer_p_p.h
+        qquickdockmoveguide.cpp
+        qquickdockmoveguide_p.h
+        qquickdockarea.cpp
+        qquickdockarea_p.h
+        qquickdockarea_p_p.h
+        qquickdockpanel.cpp
+        qquickdockpanel_p.h
+        qquickdockpanel_p_p.h
+        qquickdockwindow.cpp
+        qquickdockwindow_p.h
+        qquickdocklayout_p_p.h
+        qquickdocklayout_p.h
+        qquickdocklayout.cpp
+        qquickdocktabbar_p_p.h
+        qquickdocktabbar_p.h
+        qquickdocktabbar.cpp
+        qquickdocksidecontainer_p_p.h
+        qquickdocksidecontainer_p.h
+        qquickdocksidecontainer.cpp
+
+
         qtquicktemplates2global.cpp qtquicktemplates2global_p.h
         qtquicktemplates2math_p.h
     NO_UNITY_BUILD_SOURCES
@@ -169,7 +197,7 @@ qt_internal_extend_target(QuickTemplates2 CONDITION QT_FEATURE_quicktemplates2_c
     qquickmenubar_p_p.h
     qquickmenubaritem.cpp qquickmenubaritem_p.h
     qquickmenubaritem_p_p.h
-    qquicksplitview.cpp qquicksplitview_p.h
+    qquicksplitview.cpp qquicksplitview_p.h qquicksplitview_p_p.h
     qquickswipeview.cpp qquickswipeview_p.h
     qquicktabbar.cpp qquicktabbar_p.h
 )

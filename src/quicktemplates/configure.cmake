@@ -39,8 +39,15 @@ qt_feature("quicktemplates2-container" PRIVATE
     PURPOSE "Provides support for Container and its sub-classes."
     CONDITION QT_FEATURE_qml_object_model
 )
+qt_feature("quicktemplates2-dock" PRIVATE
+    SECTION "Quick Templates 2"
+    LABEL "Dock support"
+    PURPOSE "Provides support for DockPanel and related classes."
+    CONDITION QT_FEATURE_quicktemplates2_container
+)
 qt_configure_add_summary_section(NAME "Qt Quick Templates 2")
 qt_configure_add_summary_entry(ARGS "quicktemplates2-hover")
 qt_configure_add_summary_entry(ARGS "quicktemplates2-multitouch")
 qt_configure_add_summary_entry(ARGS "quicktemplates2-calendar")
+qt_configure_add_summary_entry(ARGS "quicktemplates2-dock")
 qt_configure_end_summary_section() # end of "Qt Quick Templates 2" section

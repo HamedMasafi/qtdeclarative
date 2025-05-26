@@ -58,6 +58,7 @@ qt_internal_add_qml_module(QuickControls2Impl
         qquickplatformtheme.cpp
         qquickplatformtheme_p.h
         qtquickcontrols2implglobal_p.h
+        qquickborderline_p.h qquickborderline.cpp
     QML_FILES
         CopyAction.qml
         CutAction.qml

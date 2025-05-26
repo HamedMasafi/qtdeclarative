@@ -27,21 +27,27 @@ class Q_QUICKCONTROLS2MATERIAL_EXPORT QQuickMaterialStyle : public QQuickAttache
 {
     Q_OBJECT
     Q_PROPERTY(Theme theme READ theme WRITE setTheme RESET resetTheme NOTIFY themeChanged FINAL)
-    Q_PROPERTY(QVariant primary READ primary WRITE setPrimary RESET resetPrimary NOTIFY primaryChanged FINAL)
-    Q_PROPERTY(QVariant accent READ accent WRITE setAccent RESET resetAccent NOTIFY accentChanged FINAL)
-    Q_PROPERTY(QVariant foreground READ foreground WRITE setForeground RESET resetForeground NOTIFY foregroundChanged FINAL)
-    Q_PROPERTY(QVariant background READ background WRITE setBackground RESET resetBackground NOTIFY backgroundChanged FINAL)
-    Q_PROPERTY(int elevation READ elevation WRITE setElevation RESET resetElevation NOTIFY elevationChanged FINAL)
-    Q_PROPERTY(RoundedScale roundedScale READ roundedScale WRITE setRoundedScale RESET resetRoundedScale
-        NOTIFY roundedScaleChanged FINAL)
-    Q_PROPERTY(ContainerStyle containerStyle READ containerStyle WRITE setContainerStyle RESET resetContainerStyle
-        NOTIFY containerStyleChanged FINAL)
+    Q_PROPERTY(QVariant primary READ primary WRITE setPrimary RESET resetPrimary NOTIFY
+                       primaryChanged FINAL)
+    Q_PROPERTY(QVariant accent READ accent WRITE setAccent RESET resetAccent NOTIFY accentChanged
+                       FINAL)
+    Q_PROPERTY(QVariant foreground READ foreground WRITE setForeground RESET resetForeground NOTIFY
+                       foregroundChanged FINAL)
+    Q_PROPERTY(QVariant background READ background WRITE setBackground RESET resetBackground NOTIFY
+                       backgroundChanged FINAL)
+    Q_PROPERTY(int elevation READ elevation WRITE setElevation RESET resetElevation NOTIFY
+                       elevationChanged FINAL)
+    Q_PROPERTY(RoundedScale roundedScale READ roundedScale WRITE setRoundedScale RESET
+                       resetRoundedScale NOTIFY roundedScaleChanged FINAL)
+    Q_PROPERTY(ContainerStyle containerStyle READ containerStyle WRITE setContainerStyle RESET
+                       resetContainerStyle NOTIFY containerStyleChanged FINAL)
 
     Q_PROPERTY(QColor primaryColor READ primaryColor NOTIFY primaryChanged FINAL) // TODO: remove?
     Q_PROPERTY(QColor accentColor READ accentColor NOTIFY accentChanged FINAL) // TODO: remove?
     Q_PROPERTY(QColor backgroundColor READ backgroundColor NOTIFY backgroundChanged FINAL)
     Q_PROPERTY(QColor primaryTextColor READ primaryTextColor NOTIFY themeChanged FINAL)
-    Q_PROPERTY(QColor primaryHighlightedTextColor READ primaryHighlightedTextColor NOTIFY primaryHighlightedTextColorChanged FINAL)
+    Q_PROPERTY(QColor primaryHighlightedTextColor READ primaryHighlightedTextColor NOTIFY
+                       primaryHighlightedTextColorChanged FINAL)
     Q_PROPERTY(QColor secondaryTextColor READ secondaryTextColor NOTIFY themeChanged FINAL)
     Q_PROPERTY(QColor hintTextColor READ hintTextColor NOTIFY themeChanged FINAL)
     Q_PROPERTY(QColor textSelectionColor READ textSelectionColor NOTIFY themeOrAccentChanged FINAL)
@@ -51,19 +57,32 @@ class Q_QUICKCONTROLS2MATERIAL_EXPORT QQuickMaterialStyle : public QQuickAttache
     Q_PROPERTY(QColor iconDisabledColor READ iconDisabledColor NOTIFY themeChanged FINAL)
     Q_PROPERTY(QColor frameColor READ frameColor NOTIFY themeChanged FINAL)
     Q_PROPERTY(QColor rippleColor READ rippleColor NOTIFY themeChanged FINAL)
-    Q_PROPERTY(QColor highlightedRippleColor READ highlightedRippleColor NOTIFY themeOrAccentChanged FINAL)
-    Q_PROPERTY(QColor switchUncheckedTrackColor READ switchUncheckedTrackColor NOTIFY themeChanged FINAL)
-    Q_PROPERTY(QColor switchCheckedTrackColor READ switchCheckedTrackColor NOTIFY themeOrAccentChanged FINAL)
-    Q_PROPERTY(QColor switchUncheckedHandleColor READ switchUncheckedHandleColor NOTIFY themeChanged FINAL)
-    Q_PROPERTY(QColor switchUncheckedHoveredHandleColor READ switchUncheckedHoveredHandleColor NOTIFY themeChanged FINAL)
-    Q_PROPERTY(QColor switchDisabledUncheckedTrackColor READ switchDisabledUncheckedTrackColor NOTIFY themeChanged FINAL)
-    Q_PROPERTY(QColor switchDisabledCheckedTrackColor READ switchDisabledCheckedTrackColor NOTIFY themeChanged FINAL)
-    Q_PROPERTY(QColor switchDisabledUncheckedTrackBorderColor READ switchDisabledUncheckedTrackBorderColor NOTIFY themeChanged FINAL)
-    Q_PROPERTY(QColor switchCheckedHandleColor READ switchCheckedHandleColor NOTIFY themeOrAccentChanged FINAL)
-    Q_PROPERTY(QColor switchDisabledUncheckedHandleColor READ switchDisabledUncheckedHandleColor NOTIFY themeChanged FINAL)
-    Q_PROPERTY(QColor switchDisabledCheckedHandleColor READ switchDisabledCheckedHandleColor NOTIFY themeChanged FINAL)
-    Q_PROPERTY(QColor switchDisabledCheckedIconColor READ switchDisabledCheckedIconColor NOTIFY themeChanged FINAL)
-    Q_PROPERTY(QColor switchDisabledUncheckedIconColor READ switchDisabledUncheckedIconColor NOTIFY themeChanged FINAL)
+    Q_PROPERTY(QColor highlightedRippleColor READ highlightedRippleColor NOTIFY themeOrAccentChanged
+                       FINAL)
+    Q_PROPERTY(QColor switchUncheckedTrackColor READ switchUncheckedTrackColor NOTIFY themeChanged
+                       FINAL)
+    Q_PROPERTY(QColor switchCheckedTrackColor READ switchCheckedTrackColor NOTIFY
+                       themeOrAccentChanged FINAL)
+    Q_PROPERTY(QColor switchUncheckedHandleColor READ switchUncheckedHandleColor NOTIFY themeChanged
+                       FINAL)
+    Q_PROPERTY(QColor switchUncheckedHoveredHandleColor READ switchUncheckedHoveredHandleColor
+                       NOTIFY themeChanged FINAL)
+    Q_PROPERTY(QColor switchDisabledUncheckedTrackColor READ switchDisabledUncheckedTrackColor
+                       NOTIFY themeChanged FINAL)
+    Q_PROPERTY(QColor switchDisabledCheckedTrackColor READ switchDisabledCheckedTrackColor NOTIFY
+                       themeChanged FINAL)
+    Q_PROPERTY(QColor switchDisabledUncheckedTrackBorderColor READ
+                       switchDisabledUncheckedTrackBorderColor NOTIFY themeChanged FINAL)
+    Q_PROPERTY(QColor switchCheckedHandleColor READ switchCheckedHandleColor NOTIFY
+                       themeOrAccentChanged FINAL)
+    Q_PROPERTY(QColor switchDisabledUncheckedHandleColor READ switchDisabledUncheckedHandleColor
+                       NOTIFY themeChanged FINAL)
+    Q_PROPERTY(QColor switchDisabledCheckedHandleColor READ switchDisabledCheckedHandleColor NOTIFY
+                       themeChanged FINAL)
+    Q_PROPERTY(QColor switchDisabledCheckedIconColor READ switchDisabledCheckedIconColor NOTIFY
+                       themeChanged FINAL)
+    Q_PROPERTY(QColor switchDisabledUncheckedIconColor READ switchDisabledUncheckedIconColor NOTIFY
+                       themeChanged FINAL)
     Q_PROPERTY(QColor scrollBarColor READ scrollBarColor NOTIFY themeChanged FINAL)
     Q_PROPERTY(QColor scrollBarHoveredColor READ scrollBarHoveredColor NOTIFY themeChanged FINAL)
     Q_PROPERTY(QColor scrollBarPressedColor READ scrollBarPressedColor NOTIFY themeChanged FINAL)
@@ -73,10 +92,20 @@ class Q_QUICKCONTROLS2MATERIAL_EXPORT QQuickMaterialStyle : public QQuickAttache
     Q_PROPERTY(QColor tooltipColor READ tooltipColor NOTIFY tooltipColorChanged FINAL)
     Q_PROPERTY(QColor toolBarColor READ toolBarColor NOTIFY toolBarColorChanged FINAL)
     Q_PROPERTY(QColor toolTextColor READ toolTextColor NOTIFY toolTextColorChanged FINAL)
-    Q_PROPERTY(QColor spinBoxDisabledIconColor READ spinBoxDisabledIconColor NOTIFY themeChanged FINAL)
-    Q_PROPERTY(QColor sliderDisabledColor READ sliderDisabledColor NOTIFY themeChanged FINAL REVISION(2, 15))
-    Q_PROPERTY(QColor textFieldFilledContainerColor READ textFieldFilledContainerColor NOTIFY themeChanged FINAL)
-
+    Q_PROPERTY(
+            QColor spinBoxDisabledIconColor READ spinBoxDisabledIconColor NOTIFY themeChanged FINAL)
+    Q_PROPERTY(QColor sliderDisabledColor READ sliderDisabledColor NOTIFY themeChanged FINAL
+                       REVISION(2, 15))
+    Q_PROPERTY(QColor textFieldFilledContainerColor READ textFieldFilledContainerColor NOTIFY
+                       themeChanged FINAL)
+    Q_PROPERTY(
+            QColor dockPanelTitleBarBackgroundColorLight READ dockPanelTitleBarBackgroundColorLight)
+    Q_PROPERTY(
+            QColor dockPanelTitleBarBackgroundColorDark READ dockPanelTitleBarBackgroundColorDark)
+    Q_PROPERTY(QColor dockPanelTitleBarBackgroundColorActiveLight READ
+                       dockPanelTitleBarBackgroundColorActiveLight)
+    Q_PROPERTY(QColor dockPanelTitleBarBackgroundColorActiveDark READ
+                       dockPanelTitleBarBackgroundColorActiveDark)
     Q_PROPERTY(int touchTarget READ touchTarget CONSTANT FINAL)
     Q_PROPERTY(int buttonVerticalPadding READ buttonVerticalPadding CONSTANT FINAL)
     Q_PROPERTY(int buttonHeight READ buttonHeight CONSTANT FINAL)
@@ -104,16 +133,9 @@ class Q_QUICKCONTROLS2MATERIAL_EXPORT QQuickMaterialStyle : public QQuickAttache
     QML_ADDED_IN_VERSION(2, 0)
 
 public:
-    enum Theme {
-        Light,
-        Dark,
-        System
-    };
+    enum Theme { Light, Dark, System };
 
-    enum Variant {
-        Normal,
-        Dense
-    };
+    enum Variant { Normal, Dense };
 
     enum Color {
         Red,
@@ -164,10 +186,7 @@ public:
         FullScale = 0xFF // For full we use half the height of the item.
     };
 
-    enum class ContainerStyle {
-        Filled,
-        Outlined
-    };
+    enum class ContainerStyle { Filled, Outlined };
 
     Q_ENUM(Theme)
     Q_ENUM(Variant)
@@ -241,7 +260,7 @@ public:
     QColor iconColor() const;
     QColor iconDisabledColor() const;
     Q_INVOKABLE QColor buttonColor(Theme theme, const QVariant &background, const QVariant &accent,
-        bool enabled, bool flat, bool highlighted, bool checked) const;
+                                   bool enabled, bool flat, bool highlighted, bool checked) const;
     QColor frameColor() const;
     QColor rippleColor() const;
     QColor highlightedRippleColor() const;
@@ -319,7 +338,8 @@ Q_SIGNALS:
     void containerStyleChanged();
 
 protected:
-    void attachedParentChange(QQuickAttachedPropertyPropagator *newParent, QQuickAttachedPropertyPropagator *oldParent) override;
+    void attachedParentChange(QQuickAttachedPropertyPropagator *newParent,
+                              QQuickAttachedPropertyPropagator *oldParent) override;
 
 private:
     void init();

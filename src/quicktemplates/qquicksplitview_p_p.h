@@ -30,8 +30,10 @@ class Q_QUICKTEMPLATES2_EXPORT QQuickSplitViewPrivate : public QQuickContainerPr
 
 public:
     void updateFillIndex();
-    void layoutResizeSplitItems(qreal &usedWidth, qreal &usedHeight, int &indexBeingResizedDueToDrag);
-    void layoutResizeFillItem(QQuickItem *fillItem, qreal &usedWidth, qreal &usedHeight, int indexBeingResizedDueToDrag);
+    void layoutResizeSplitItems(qreal &usedWidth, qreal &usedHeight,
+                                int &indexBeingResizedDueToDrag);
+    void layoutResizeFillItem(QQuickItem *fillItem, qreal &usedWidth, qreal &usedHeight,
+                              int indexBeingResizedDueToDrag);
     void limitAndApplySizes(qreal usedWidth, qreal usedHeight);
     void layoutPositionItems(const QQuickItem *fillItem);
     void requestLayout();
@@ -52,7 +54,8 @@ public:
     bool isHorizontal() const;
     qreal accumulatedSize(int firstIndex, int lastIndex) const;
 
-    struct EffectiveSizeData {
+    struct EffectiveSizeData
+    {
         qreal effectiveMinimumWidth;
         qreal effectiveMinimumHeight;
         qreal effectivePreferredWidth;
@@ -62,14 +65,15 @@ public:
     };
 
     // Used during the layout
-    struct LayoutData {
+    struct LayoutData
+    {
         qreal width = 0;
         qreal height = 0;
         bool wasResizedByHandle = false;
     };
 
     EffectiveSizeData effectiveSizeData(const QQuickItemPrivate *itemPrivate,
-        const QQuickSplitViewAttached *attached) const;
+                                        const QQuickSplitViewAttached *attached) const;
 
     int handleIndexForSplitIndex(int splitIndex) const;
 
@@ -88,8 +92,8 @@ public:
 
     Qt::Orientation m_orientation = Qt::Horizontal;
     QQmlComponent *m_handle = nullptr;
-    QList<QQuickItem*> m_handleItems;
-    QHash<QQuickItem*, LayoutData> m_layoutData;
+    QList<QQuickItem *> m_handleItems;
+    QHash<QQuickItem *, LayoutData> m_layoutData;
     int m_hoveredHandleIndex = -1;
     int m_pressedHandleIndex = -1;
     int m_nextVisibleIndexAfterPressedHandle = -1;
